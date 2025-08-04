@@ -1,5 +1,5 @@
 module Directions
-  VALID_DIRECTIONS = {
+  DIRECTIONS = {
     'N' => [0, 1],
     'S' => [0, -1],
     'E' => [1, 0],
@@ -7,14 +7,14 @@ module Directions
   }.freeze
 
   def self.valid?(command)
-    VALID_DIRECTIONS.key?(command)
+    DIRECTIONS.key?(command)
   end
 
   def self.delta(command)
-    VALID_DIRECTIONS[command]
+    DIRECTIONS[command]
   end
 
   def self.all
-    VALID_DIRECTIONS.keys
+    DIRECTIONS.keys
   end
 end
